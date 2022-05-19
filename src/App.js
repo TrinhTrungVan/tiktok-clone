@@ -5,6 +5,10 @@ import { publicRoutes } from '~/routes';
 
 import DefaultLayout from '~/components/Layout/DefaultLayout/DefaultLayout';
 
+import './App.scss';
+import '~/assets/fonts/boxicons-2.1.2/css/boxicons.min.css';
+import '~/assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css';
+
 function App() {
     return (
         <Router>

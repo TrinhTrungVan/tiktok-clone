@@ -1,0 +1,97 @@
+@use '../../scss/' as *;
+
+.search-result {
+    width: 361px;
+}
+
+.search-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0 12px 5px;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.search {
+    position: relative;
+    display: flex;
+    width: 361px;
+    height: 46px;
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+    border: 1.5px solid transparent;
+    padding-left: 16px;
+    overflow: hidden;
+    transition: border 0.25s ease;
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+
+    input {
+        flex: 1;
+        height: 100%;
+        font-size: 1.6rem;
+        color: $black-color;
+        caret-color: $primary-color;
+        background-color: transparent;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+    }
+
+    .clear,
+    .loading {
+        position: absolute;
+        right: 68px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(22, 24, 35, 0.34);
+        font-size: 1.6rem;
+    }
+
+    .loading {
+        transform-origin: center;
+        animation: spinner 1s linear infinite;
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: translateY(-50%) rotate(0deg);
+        }
+        100% {
+            transform: translateY(-50%) rotate(360deg);
+        }
+    }
+
+    .search-btn {
+        position: relative;
+        width: 52px;
+        height: 100%;
+        font-size: 2.5rem;
+        color: rgba(22, 24, 35, 0.34);
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 60%;
+            background-color: rgba(22, 24, 35, 0.12);
+            top: 20%;
+            left: -1px;
+        }
+
+        i {
+            margin-top: 5px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(22, 24, 35, 0.03);
+        }
+
+        &:active {
+            background-color: rgba(22, 24, 35, 0.06);
+        }
+    }
+}

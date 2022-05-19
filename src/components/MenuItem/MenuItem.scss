@@ -1,0 +1,23 @@
+@use '../../scss/' as *;
+
+.menu-item__wrapper {
+    @include flex(center, flex-start);
+    width: 100%;
+    color: $text-color;
+    font-size: 1.6rem;
+    font-weight: 700;
+    min-width: 100px;
+    padding: 9px 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.25s ease;
+
+    .icon {
+        font-size: 2rem;
+        margin-right: 12px;
+    }
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}

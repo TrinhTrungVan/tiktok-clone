@@ -1,0 +1,37 @@
+@use '../../scss/' as *;
+
+.popper__wrapper {
+    @include flex(flex-start, center);
+    flex-direction: column;
+    width: 100%;
+    max-height: min((100vh - 96px) - 60px, 734px);
+    min-height: 100px;
+    background-color: $white-color;
+    box-shadow: rgb(0 0 0 /12%) 0px 2px 12px;
+    border-radius: 8px;
+    padding: 8px 0;
+    position: relative;
+    overflow: auto;
+
+    /* Width */
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $white-color;
+        border-radius: 8px;
+        margin-top: 56px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #ccc;
+    }
+}

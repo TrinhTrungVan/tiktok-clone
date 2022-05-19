@@ -1,4 +1,4 @@
-import Header from '~/components/Layout/components/Header/Header';
+import Header from '~/components/Header/Header';
 
 const HeaderOnly = (props) => {
     return (

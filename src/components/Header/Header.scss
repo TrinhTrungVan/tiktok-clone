@@ -1,0 +1,57 @@
+@use '../../scss/' as *;
+
+.header__wrapper {
+    @include flex(center, center);
+    width: 100%;
+    height: $header-height;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+
+    .inner {
+        @include flex(center, space-between);
+        height: 100%;
+        width: 1150px;
+        padding: 0 24px 0 20px;
+
+        .actions {
+            @include flex(center, center);
+            margin-top: 8px;
+
+            .btn {
+                display: flex;
+                font-size: 2.8rem;
+                margin-right: 20px;
+            }
+
+            .avatar img {
+                width: 32px;
+                height: 32px;
+                border-radius: 999px;
+            }
+
+            .more-btn {
+                font-size: 2.5rem;
+                margin-left: 20px;
+                padding: 0 4px;
+                background-color: transparent;
+                cursor: pointer;
+            }
+
+            .notification {
+                position: relative;
+
+                .notification__count {
+                    position: absolute;
+                    top: -8px;
+                    right: -10px;
+                    background-color: $primary-color;
+                    border-radius: 10px;
+                    font-size: 1.4rem;
+                    color: $white-color;
+                    font-weight: 700;
+                    padding: 0px 5px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

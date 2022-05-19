@@ -1,0 +1,37 @@
+@use '../../scss/' as *;
+
+.note__wrapper {
+    position: relative;
+
+    .content {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+        padding: 8px;
+        cursor: default;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+
+        .arrow {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &:hover .content {
+        opacity: 1;
+        visibility: visible;
+    }
+}

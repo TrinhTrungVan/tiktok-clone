@@ -1,0 +1,15 @@
+@use '../../scss/' as *;
+
+.menu__content {
+    min-width: 224px;
+    position: relative;
+
+    .language-change {
+        width: 100%;
+    }
+
+    .logout {
+        width: 100%;
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+}
